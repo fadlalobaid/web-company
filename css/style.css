@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+:root {
+    --main-back: #2d1e17;
+    --main-font: #9d8a7c;
+    --main-color: 796254;
+    --main-black: black;
+    --main-white: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    /* لازم نصفرهن بكل مشروع */
+    box-sizing: border-box;
+}
+body {
+    font-family: cairo;
+    direction: rtl;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ul li {
+    list-style: none;
+}
+/* li a{
+    text-decoration: none;
+ } */
+.contianer {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: var(--main-back); */
+
+    /* height: 40%; */
+}
+/* small */
+@media (max-width: 786px) {
+    .contianer {
+        width: 100%;
+    }
+}
+/* medium */
+@media (min-width: 787px) and (max-width: 991px) {
+    .contianer {
+        width: 750px;
+    }
+}
+/* large */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contianer {
+        width: 970px;
+    }
+}
+/* extra large */
+@media (min-width: 1200px) {
+    .contianer {
+        width: 1100px;
+    }
+}
+/* header style */
+header {
+    height: 72px;
+    color: var(--main-font);
+    background-color: var(--main-back);
+}
+header .contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .contianer img {
+    color: black;
+    mix-blend-mode: lighten;
+    width: 70px;
+}
+header .contianer nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    header .contianer nav {
+        justify-content: end;
+    }
+}
+
+header .contianer nav ul {
+    display: flex;
+    /* align-items: center; */
+}
+@media (max-width: 768px) {
+    header .contianer nav ul {
+        display: none;
+    }
+}
+.nav-tog:hover + ul {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column; /*يظهر بشكل عمودي*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+@media (min-width: 768px) {
+    nav .nav-tog {
+        display: none;
+    }
+    /* eng2223183 */
+}
+header .contianer nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 20px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-font);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    header .contianer nav ul li a {
+        border-bottom: 2px solid #ccc;
+    }
+}
+header .contianer nav ul li a.active,
+header .contianer nav ul li a:hover {
+    color: var(--main-white);
+    border-bottom: 3px solid var(--main-white);
+    text-shadow: 0 0 10px var(--main-white);
+}
+header .contianer .social {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    header .contianer .social {
+        display: none;
+    }
+}
+header .contianer .social i {
+    margin: 5px;
+    font-size: 30px;
+    display: flex;
+    color: var(--main-back);
+    background-color: var(--main-font);
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+header .contianer .social:hover > :not(:hover) {
+    scale: 0.9;
+    color: var(--main-font);
+    background-color: var(--main-back);
+    text-shadow: 0 0 10px var(--main-font);
+}
+/* end header */
+/* start hero */
+.hero {
+    background-image: url(../images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(70vh - 72px);
+}
+@media (max-width: 786px) {
+    .hero {
+        background-image: url(../images/786.jpeg);
+        height: calc(140vh - 60px);
+    }
+}
+.hero .contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 786px) {
+    .hero .contianer {
+        margin-top: 5px;
+        flex-direction: column-reverse;
+    }
+}
+.hero .contianer .hero-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .hero .contianer .hero-img img {
+        width: 200px;
+        height: 200px;
+    }
+}
+.hero .contianer .hero-title {
+    color: var(--main-font);
+    font-weight: 800;
+}
+.hero .contianer .hero-info h2 {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.hero .contianer .hero-info p {
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--main-font);
+}
+@media (max-width: 768px) {
+    .hero .contianer .hero-title {
+        font-size: 35px;
+        text-align: center;
+    }
+    .hero .contianer .hero-info h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .hero .contianer .hero-info p {
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+.hero .contianer .social {
+    display: flex;
+}
+
+.hero .contianer .social i {
+    margin: 5px;
+    font-size: 30px;
+    display: flex;
+    color: var(--main-back);
+    background-color: var(--main-font);
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.hero .contianer .social:hover > :not(:hover) {
+    scale: 0.9;
+    filter: blur(1px);
+    text-shadow: 0 0 10px var(--main-font);
+}
+.hero .contianer .hero-info .call {
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+.hero .contianer .hero-info .call button {
+    background-color: var(--main-back);
+    color: var(--main-font);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+}
+.hero .contianer .hero-info .call button:hover {
+    transform: scale(1.1);
+    background-color: var(--main-font);
+    color: var(--main-back);
+    box-shadow: 0 0 5px var(--main-black);
+}
+@media (max-width: 786px) {
+    .hero .contianer .social {
+        justify-content: center;
+    }
+    .hero .contianer .hero-info .call {
+        justify-content: center;
+    }
+    .hero .contianer .hero-info .call button {
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .hero .contianer .social i {
+        margin: 5px;
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
+}
+/* end hero */
+/*start service*/
+.services {
+    background-color: #eee;
+    padding: 50px 0;
+}
+.section-title {
+    text-align: center;
+    color: var(--main-back);
+    font-size: 40px;
+    text-shadow: 0 0 5px #000;
+}
+
+.sectio-desc {
+    color: var(--main-font);
+    text-align: center;
+    font-size: 20px;
+    margin: 15px;
+}
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 25px;
+    }
+    .sectio-desc {
+        font-size: 15px;
+    }
+}
+.services .contianer .all-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15;
+
+    opacity: 0.9;
+}
+.services .contianer .all-services .service {
+    background-color: var(--main-back);
+    margin: 10px;
+    padding: 10px;
+    /* border-radius: 10px; */
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.services .contianer .all-services .service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0%;
+    background-color: var(--main-font);
+    transition: 0.3s ease-in-out;
+}
+.services .contianer .all-services .service::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    height: 0%;
+    background-color: var(--main-font);
+    transition: 0.3s ease-in-out;
+}
+.services .contianer .all-services .service:hover::after {
+    height: 100%;
+}
+.services .contianer .all-services .service:hover::before {
+    height: 100%;
+}
+
+.services .contianer .all-services:hover > :not(:hover) {
+    transform: scale(0.9) translateY(-10px);
+
+    box-shadow: none;
+}
+.services .contianer .all-services .service img {
+    width: 70px;
+}
+.services .contianer .all-services .service h3 {
+    color: var(--main-font);
+    margin: 5px;
+}
+.services .contianer .all-services .service p {
+    color: var(--main-white);
+    margin: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+/*end service*/
+
+/*about-us*/
+.about-us {
+    padding: 50px 0;
+}
+.about-us .contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-info,
+.about-img {
+    width: 50%;
+}
+.about-us h2 {
+    color: var(--main-back);
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 18px;
+    width: 90%;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.about-us button {
+    background-color: var(--main-back);
+    color: var(--main-white);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.about-us button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--main-font);
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.about-us button::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-font);
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.about-us button:hover::after {
+    color: red;
+    width: 50%;
+}
+.about-us button:hover::before {
+    color: red;
+    width: 50%;
+}
+
+.about-us .about-img {
+    background-color: var(--main-back);
+    border-radius: 10px;
+}
+.about-us .about-img img {
+    transform: translate(-10px, -10px);
+    width: 100%;
+    border-radius: 10px;
+}
+@media (max-width: 786px) {
+    .about-us .contianer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-info,
+    .about-img {
+        width: 100%;
+    }
+    .about-us h2 {
+        font-size: 30px;
+    }
+    .about-us p {
+        width: 100%;
+    }
+    .about-us .about-info {
+        margin-bottom: 20px;
+    }
+}
+/*about-us*/
