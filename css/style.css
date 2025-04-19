@@ -23,10 +23,9 @@ html {
 
 ul li {
     list-style: none;
-}
-/* li a{
+} a{
     text-decoration: none;
- } */
+ }
 .contianer {
     padding-left: 15px;
     padding-right: 15px;
@@ -467,6 +466,10 @@ header .contianer .social:hover > :not(:hover) {
     transform: translate(-10px, -10px);
     width: 100%;
     border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+.about-us .about-img img:hover{
+    transform: translate(10px, 10px);
 }
 @media (max-width: 786px) {
     .about-us .contianer {
@@ -488,3 +491,93 @@ header .contianer .social:hover > :not(:hover) {
     }
 }
 /*about-us*/
+
+/*statistacs*/
+.statistacs{
+    padding: 70px 0;
+    background-image: url(../images/st-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.statistacs .overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000043;
+    transition: 0.3s ease-in-out;
+}
+.statistacs .contianer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+   
+}
+
+.statistacs .contianer .stat{
+    background-color: var(--main-white);
+    color: var(--main-font);
+    text-align: center;
+    padding: 10px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+.statistacs .contianer .stat::after{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 0%;
+    top: 0;
+    right: 0;
+    background-color:var(--main-back);
+    z-index: 3;
+    transition: 0.5s ease-in-out;
+}
+.statistacs .contianer .stat:hover::after{
+    height: 100%;
+    
+}
+.statistacs .contianer .stat::before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    background-color:var(--main-back);
+    z-index: 3;
+    transition: 0.5s ease-in-out;
+}
+.statistacs .contianer .stat:hover::before{
+    height: 100%;
+    
+}
+
+.statistacs .contianer .stat:hover{
+    transform: rotate(2deg) scale(1.1);
+    opacity: 0.8;
+}
+
+.statistacs .contianer .stat img{
+    width: 80px;
+
+}
+.statistacs .contianer .stat h3{
+ margin: 10px 0;
+
+ 
+}
+.statistacs .contianer .stat p{
+ margin: 10px 0;
+ font-size: 25px;
+
+
+}
+/*statistacs*/
