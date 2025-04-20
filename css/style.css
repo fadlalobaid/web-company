@@ -23,9 +23,10 @@ html {
 
 ul li {
     list-style: none;
-} a{
+}
+a {
     text-decoration: none;
- }
+}
 .contianer {
     padding-left: 15px;
     padding-right: 15px;
@@ -468,7 +469,7 @@ header .contianer .social:hover > :not(:hover) {
     border-radius: 10px;
     transition: 0.5s ease-in-out;
 }
-.about-us .about-img img:hover{
+.about-us .about-img img:hover {
     transform: translate(10px, 10px);
 }
 @media (max-width: 786px) {
@@ -493,7 +494,7 @@ header .contianer .social:hover > :not(:hover) {
 /*about-us*/
 
 /*statistacs*/
-.statistacs{
+.statistacs {
     padding: 70px 0;
     background-image: url(../images/st-bg.jpeg);
     background-size: cover;
@@ -501,27 +502,26 @@ header .contianer .social:hover > :not(:hover) {
     background-attachment: fixed;
     position: relative;
 }
-.statistacs .overlay{
+.statistacs .overlay {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #00000043;
     transition: 0.3s ease-in-out;
 }
-.statistacs .contianer{
+.statistacs .contianer {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-   
 }
 
-.statistacs .contianer .stat{
+.statistacs .contianer .stat {
     background-color: var(--main-white);
     color: var(--main-font);
     text-align: center;
-    padding: 10px ;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
     transition: 0.3s ease-in-out;
@@ -529,55 +529,193 @@ header .contianer .social:hover > :not(:hover) {
     position: relative;
     overflow: hidden;
 }
-.statistacs .contianer .stat::after{
+.statistacs .contianer .stat::after {
     position: absolute;
     content: "";
     width: 5px;
     height: 0%;
     top: 0;
     right: 0;
-    background-color:var(--main-back);
+    background-color: var(--main-back);
     z-index: 3;
     transition: 0.5s ease-in-out;
 }
-.statistacs .contianer .stat:hover::after{
+.statistacs .contianer .stat:hover::after {
     height: 100%;
-    
 }
-.statistacs .contianer .stat::before{
+.statistacs .contianer .stat::before {
     position: absolute;
     content: "";
     width: 5px;
     height: 0%;
     bottom: 0;
     left: 0;
-    background-color:var(--main-back);
+    background-color: var(--main-back);
     z-index: 3;
     transition: 0.5s ease-in-out;
 }
-.statistacs .contianer .stat:hover::before{
+.statistacs .contianer .stat:hover::before {
     height: 100%;
-    
 }
 
-.statistacs .contianer .stat:hover{
+.statistacs .contianer .stat:hover {
     transform: rotate(2deg) scale(1.1);
     opacity: 0.8;
 }
 
-.statistacs .contianer .stat img{
+.statistacs .contianer .stat img {
     width: 80px;
-
 }
-.statistacs .contianer .stat h3{
- margin: 10px 0;
-
- 
+.statistacs .contianer .stat h3 {
+    margin: 10px 0;
 }
-.statistacs .contianer .stat p{
- margin: 10px 0;
- font-size: 25px;
-
-
+.statistacs .contianer .stat p {
+    margin: 10px 0;
+    font-size: 25px;
 }
 /*statistacs*/
+
+/* courses */
+
+.courses {
+    padding: 50px 0;
+    background-color: #eee;
+}
+.courses .all-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.courses .all-courses .cours {
+    background-color: #ccc;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+}
+/* .courses .all-courses .cours::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(180deg,rgb(0,183,255),rgb(255,48,255));
+    height: 130;
+    animation: rotRGB 3s linear infinite;
+    transition:all 0.3s linear;
+
+}
+@keyframes rotRGB{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.courses .all-courses .cours::after{
+    content: "";
+    position: absolute;
+    background-color: #2d1e17;
+    inset: 5px;
+    border-radius: 15px;
+    z-index: -1;
+}
+.courses .all-courses .cours:hover::after{
+    background-image: linear-gradient(180deg,rgb(81,255,0),purple);
+    animation: rotRGB 3.5s linear infinite;
+} */
+.courses .all-courses .cours:hover {
+    transform: scale(1.05);
+}
+.courses .all-courses .cours img {
+    width: 50%;
+}
+.courses .all-courses .cours h3 {
+    color: var(--main-back);
+    margin: 10px 0;
+    font-size: 25px;
+}
+.courses .all-courses .cours p {
+    margin:0px 10px 10px 10px;
+}
+
+.courses .all-courses .cours .cours-price {
+display: flex;
+justify-content: space-around;
+margin: 5px 15px 10px 15px;
+
+}
+.cours-price div :last-child{
+    color: #ff0000;
+    font-size:17px ;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+.cours-price div :first-child{
+
+    font-size:17px ;
+    font-weight: 700;
+
+}
+.cours-price :last-child{
+    font-size: 17px;
+    color: green;
+    font-weight: 700;
+}
+
+.courses .all-courses .cours .cours-info{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.courses .all-courses .cours button{
+    background-color: var(--main-back);
+    color: var(--main-white);
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+}
+.courses .all-courses .cours button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--main-font);
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.courses .all-courses .cours button::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-font);
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.courses .all-courses .cours button:hover::after {
+    color: red;
+    width: 50%;
+}
+.courses .all-courses .cours button:hover::before {
+    color: red;
+    width: 60%;
+}
+/* courses */
