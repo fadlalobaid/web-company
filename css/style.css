@@ -641,40 +641,37 @@ header .contianer .social:hover > :not(:hover) {
     font-size: 25px;
 }
 .courses .all-courses .cours p {
-    margin:0px 10px 10px 10px;
+    margin: 0px 10px 10px 10px;
 }
 
 .courses .all-courses .cours .cours-price {
-display: flex;
-justify-content: space-around;
-margin: 5px 15px 10px 15px;
-
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 15px 10px 15px;
 }
-.cours-price div :last-child{
+.cours-price div :last-child {
     color: #ff0000;
-    font-size:17px ;
+    font-size: 17px;
     font-weight: 700;
     text-decoration: line-through;
 }
-.cours-price div :first-child{
-
-    font-size:17px ;
+.cours-price div :first-child {
+    font-size: 17px;
     font-weight: 700;
-
 }
-.cours-price :last-child{
+.cours-price :last-child {
     font-size: 17px;
     color: green;
     font-weight: 700;
 }
 
-.courses .all-courses .cours .cours-info{
+.courses .all-courses .cours .cours-info {
     display: flex;
     justify-content: space-around;
     margin: 10px 0;
     font-size: 20px;
 }
-.courses .all-courses .cours button{
+.courses .all-courses .cours button {
     background-color: var(--main-back);
     color: var(--main-white);
     width: 100%;
@@ -686,7 +683,6 @@ margin: 5px 15px 10px 15px;
     overflow: hidden;
     position: relative;
     z-index: 1;
-
 }
 .courses .all-courses .cours button::after {
     position: absolute;
