@@ -185,6 +185,7 @@ header .contianer .social:hover > :not(:hover) {
     justify-content: space-between;
     align-items: center;
 }
+
 @media (max-width: 786px) {
     .hero .contianer {
         margin-top: 5px;
@@ -195,6 +196,12 @@ header .contianer .social:hover > :not(:hover) {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+    transition: 0.3s linear;
+}
+.hero .contianer .hero-img img:hover{
+    transform: scale(1.05);
+
 }
 @media (max-width: 768px) {
     .hero .contianer .hero-img img {
@@ -715,3 +722,71 @@ header .contianer .social:hover > :not(:hover) {
     width: 60%;
 }
 /* courses */
+/* portfolio */
+.portfolio{
+    margin: 50px 0;
+}
+.port-contianer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+.portfolio .box{
+    width: 350px;
+    margin: 0 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 10px #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.portfolio .box img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio .box .info{
+    position: absolute;
+    background-color: #eeeeee86;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s linear;
+
+}
+
+@media (max-width:768px) {
+
+    .portfolio .box .info{
+        width: 50%;
+        height: 50%;
+    }
+}
+.portfolio .box:hover .info{
+    left: 0;
+}
+.portfolio .box .info h3{
+    font-size: 30px;
+    color: var(--main-back);
+}
+.portfolio .box .info p{
+    font-weight: 700;
+    color: rgb(33, 116, 3);
+    
+    margin: 5px 0;
+}
+.portfolio .box .info a{
+    background-color: rgb(33, 116, 3);
+    color: #ffffff;
+    font-size: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+/* portfolio */
