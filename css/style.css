@@ -6,7 +6,7 @@
     --main-color: 796254;
     --main-black: black;
     --main-white: #fff;
-    --box-shadow:0 0 5px #000;
+    --box-shadow: 0 0 5px #000;
 }
 * {
     margin: 0;
@@ -200,9 +200,8 @@ header .contianer .social:hover > :not(:hover) {
     box-shadow: 0 0 10px yellow;
     transition: 0.3s linear;
 }
-.hero .contianer .hero-img img:hover{
+.hero .contianer .hero-img img:hover {
     transform: scale(1.05);
-
 }
 @media (max-width: 768px) {
     .hero .contianer .hero-img img {
@@ -537,6 +536,16 @@ header .contianer .social:hover > :not(:hover) {
     position: relative;
     overflow: hidden;
 }
+@media (max-width: 360px) {
+    .statistacs .contianer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .statistacs .contianer .stat {
+        width: 90%;
+    }
+}
 .statistacs .contianer .stat::after {
     position: absolute;
     content: "";
@@ -645,11 +654,11 @@ header .contianer .social:hover > :not(:hover) {
 }
 .courses .all-courses .cours h3 {
     color: var(--main-back);
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 25px;
 }
 .courses .all-courses .cours p {
-    margin: 0px 10px 10px 10px;
+    margin: 0px 5px 5px 5px;
 }
 
 .courses .all-courses .cours .cours-price {
@@ -659,16 +668,16 @@ header .contianer .social:hover > :not(:hover) {
 }
 .cours-price div :last-child {
     color: #ff0000;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     text-decoration: line-through;
 }
 .cours-price div :first-child {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
 }
 .cours-price :last-child {
-    font-size: 17px;
+    font-size: 15px;
     color: green;
     font-weight: 700;
 }
@@ -676,8 +685,8 @@ header .contianer .social:hover > :not(:hover) {
 .courses .all-courses .cours .cours-info {
     display: flex;
     justify-content: space-around;
-    margin: 10px 0;
-    font-size: 20px;
+    margin: 5px 0;
+    font-size: 15px;
 }
 .courses .all-courses .cours button {
     background-color: var(--main-back);
@@ -722,67 +731,79 @@ header .contianer .social:hover > :not(:hover) {
     color: red;
     width: 60%;
 }
+@media (max-width: 360px) {
+    .courses .all-courses {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .courses .all-courses .cours {
+        width: 90%;
+    }
+}
 /* courses */
 /* portfolio */
-.portfolio{
+.portfolio {
     margin: 50px 0;
 }
-.port-contianer{
+.port-contianer {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
 }
-.portfolio .box{
-    width: 350px;
+.portfolio .box {
+    width: 90%;
     margin: 0 20px;
     position: relative;
     text-align: center;
     box-shadow: 0 0 10px #000;
     border-radius: 10px;
     overflow: hidden;
+    transition: 0.3s ease-in-out;
 }
-.portfolio .box img{
+.portfolio .box img {
     width: 100%;
     height: 100%;
 }
 
-
-.portfolio .box .info{
+.portfolio .box .info {
     position: absolute;
     background-color: #eeeeee86;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 350px;
+    left: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     transition: 0.3s linear;
-
 }
 
-@media (max-width:768px) {
-
-    .portfolio .box .info{
+@media (max-width: 768px) {
+    .portfolio .box .info {
         width: 50%;
         height: 50%;
     }
+    .portfolio .box {
+    }
 }
-.portfolio .box:hover .info{
+.portfolio .box:hover .info {
     left: 0;
+    width: 100%;
+    height: 100%;
 }
-.portfolio .box .info h3{
+.portfolio .box .info h3 {
     font-size: 30px;
     color: var(--main-back);
 }
-.portfolio .box .info p{
+.portfolio .box .info p {
     font-weight: 700;
     color: rgb(33, 116, 3);
-    
+
     margin: 5px 0;
 }
-.portfolio .box .info a{
+.portfolio .box .info a {
     background-color: rgb(33, 116, 3);
     color: #ffffff;
     font-size: 20px;
@@ -793,48 +814,56 @@ header .contianer .social:hover > :not(:hover) {
 /* portfolio */
 
 /* our-team */
-.our-team{
+.our-team {
     background-color: #eee;
     padding: 50px 0;
 }
-.our-team .team{
- 
+.our-team .team {
     display: grid;
-     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-     gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
-.our-team .team .team-box{
+.our-team .team .team-box {
     background-color: #ccc;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 5px #000;
     transition: 0.3s ease-in-out;
 }
-.our-team .team .team-box:hover{
+@media (max-width: 360px) {
+    .our-team .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .our-team .team .team-box {
+        width: 90%;
+    }
+}
+.our-team .team .team-box:hover {
     transform: translateY(-10px);
 }
-.our-team .team .img-social img{
+.our-team .team .img-social img {
     width: 80%;
     border-radius: 0 0 10px 0;
 }
-.our-team .team .img-social img:hover{
+.our-team .team .img-social img:hover {
     filter: grayscale(100);
 }
-.our-team .team .img-social{
+.our-team .team .img-social {
     display: flex;
     justify-content: space-between;
-  
 }
-.our-team .team .img-social .social{
+.our-team .team .img-social .social {
     display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.our-team .team .img-social .social i:hover{
-transform: scale(1.3);
-text-shadow: 0 0 1px #000;
+.our-team .team .img-social .social i:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 1px #000;
 }
-.our-team .team .img-social .social i{
+.our-team .team .img-social .social i {
     margin: 10px;
     font-size: 30px;
     display: flex;
@@ -848,25 +877,96 @@ text-shadow: 0 0 1px #000;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-.our-team .team .team-box .team-info{
+.our-team .team .team-box .team-info {
     margin: 20px;
-   display: flex;
-   flex-direction: column;
-   align-items: center ;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.our-team .team .team-box .team-info h3{
-margin-bottom: 10px;
-color: var(--main-back);
-font-size: 20px;
-font-weight: 800;
-
+.our-team .team .team-box .team-info h3 {
+    margin-bottom: 10px;
+    color: var(--main-back);
+    font-size: 20px;
+    font-weight: 800;
 }
-.our-team .team .team-box .team-info p{
-margin-bottom: 10px;
-color: var(--main-font);
-text-shadow: 0 0 1px #000;
-font-size: 20px;
-font-weight: 600;
+.our-team .team .team-box .team-info p {
+    margin-bottom: 10px;
+    color: var(--main-font);
+    text-shadow: 0 0 1px #000;
+    font-size: 20px;
+    font-weight: 600;
 }
 /* our-team */
+
+/* our-skills */
+.our-skills {
+    padding: 50px 0;
+}
+
+.our-skills .contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-skills .contianer .skill-info .skill .count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-skills .contianer .skill-info .skill .count p {
+    font-size: 20px;
+}
+.our-skills .contianer .skill-info .skill {
+    padding: 0 10px;
+    margin: 2% 0;
+    font-weight: 700;
+    color: #9d8a7c;
+}
+
+.our-skills .contianer .skill-info .skill .progress .prog {
+    background-color: var(--main-font);
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.progress .prog span {
+    position: absolute;
+    /* width: 60%; */
+    height: 100%;
+    background-color: var(--main-back);
+    transition: 0.3s ease-in-out;
+}
+.progress .prog span:hover {
+    width: 100% !important;
+}
+.progress .prog span {
+    position: absolute;
+    height: 100%;
+    background-color: var(--main-back);
+    cursor: pointer;
+}
+.skill-img,
+.skill-info {
+    width: 50%;
+}
+@media (max-width: 768px) {
+    .our-skills .contianer {
+        flex-direction: column-reverse;
+    }
+    .skill-img,
+    .skill-info {
+        width: 100%;
+    }
+}
+.our-skills .contianer .skill-img img {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+.our-skills .contianer .skill-img img:hover {
+    filter: grayscale(100%);
+}
+
+/* our-skills */
